@@ -11,9 +11,10 @@
 		B2F3D12F1FB9AB7300F5393A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F3D12E1FB9AB7300F5393A /* ViewController.swift */; };
 		B2F3D1321FB9AB7300F5393A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F3D1301FB9AB7300F5393A /* Main.storyboard */; };
 		B2F3D1341FB9AB7300F5393A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2F3D1331FB9AB7300F5393A /* Assets.xcassets */; };
-		B2F3D1371FB9AB7300F5393A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F3D1351FB9AB7300F5393A /* LaunchScreen.storyboard */; };
+		B2F3D1371FB9AB7300F5393A /* __LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F3D1351FB9AB7300F5393A /* __LaunchScreen.storyboard */; };
 		B2F3D1421FB9AB7300F5393A /* yukaAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F3D1411FB9AB7300F5393A /* yukaAppTests.swift */; };
 		B2F3D14D1FB9AB7300F5393A /* yukaAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F3D14C1FB9AB7300F5393A /* yukaAppUITests.swift */; };
+		B2FFD30B1FC1C5FF0008DBF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2FFD30A1FC1C5FF0008DBF1 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +42,7 @@
 		B2F3D12E1FB9AB7300F5393A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B2F3D1311FB9AB7300F5393A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2F3D1331FB9AB7300F5393A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B2F3D1361FB9AB7300F5393A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B2F3D1361FB9AB7300F5393A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/__LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2F3D1381FB9AB7300F5393A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2F3D13D1FB9AB7300F5393A /* yukaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yukaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F3D1411FB9AB7300F5393A /* yukaAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yukaAppTests.swift; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		B2F3D1481FB9AB7300F5393A /* yukaAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yukaAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F3D14C1FB9AB7300F5393A /* yukaAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yukaAppUITests.swift; sourceTree = "<group>"; };
 		B2F3D14E1FB9AB7300F5393A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2FFD30A1FC1C5FF0008DBF1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +123,9 @@
 				B2F3D12C1FB9AB7300F5393A /* AppDelegate.swift */,
 				B2F3D12E1FB9AB7300F5393A /* ViewController.swift */,
 				B2F3D1301FB9AB7300F5393A /* Main.storyboard */,
+				B2FFD30A1FC1C5FF0008DBF1 /* LaunchScreen.storyboard */,
 				B2F3D1331FB9AB7300F5393A /* Assets.xcassets */,
-				B2F3D1351FB9AB7300F5393A /* LaunchScreen.storyboard */,
+				B2F3D1351FB9AB7300F5393A /* __LaunchScreen.storyboard */,
 				B2F3D1381FB9AB7300F5393A /* Info.plist */,
 			);
 			path = yukaApp;
@@ -253,8 +256,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2F3D1371FB9AB7300F5393A /* LaunchScreen.storyboard in Resources */,
+				B2F3D1371FB9AB7300F5393A /* __LaunchScreen.storyboard in Resources */,
 				B2F3D1341FB9AB7300F5393A /* Assets.xcassets in Resources */,
+				B2FFD30B1FC1C5FF0008DBF1 /* LaunchScreen.storyboard in Resources */,
 				B2F3D1321FB9AB7300F5393A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,12 +329,12 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		B2F3D1351FB9AB7300F5393A /* LaunchScreen.storyboard */ = {
+		B2F3D1351FB9AB7300F5393A /* __LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B2F3D1361FB9AB7300F5393A /* Base */,
 			);
-			name = LaunchScreen.storyboard;
+			name = __LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

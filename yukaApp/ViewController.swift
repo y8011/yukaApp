@@ -13,7 +13,12 @@ import MobileCoreServices //?
 
 
 //class ViewController: UIViewController,UIImagePickerControllerDelegate, CalculatorDelegate {
-class ViewController: UIViewController,UIImagePickerControllerDelegate, UICollectionViewDataSource, UINavigationControllerDelegate {
+class ViewController: UIViewController
+    ,UIImagePickerControllerDelegate
+    ,UICollectionViewDataSource
+    ,UINavigationControllerDelegate
+    ,UIScrollViewDelegate
+{
 
     @IBOutlet weak var displayImageView: UIImageView!
     
@@ -21,16 +26,11 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UICollec
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     
+    @IBOutlet weak var myScrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view, typically from a nib.
-//        let frame = CGRect(x:0 , y:0 , width: UIScreen.main.bounds.width, height:300 )
-//        let keyboard = CalculatorKeyboard(frame: frame)
-//        keyboard.delegate = self
-//        keyboard.showDecimal = true
-//        inputText.inputView = keyboard
-
         // MARK: - UICollectionViewDataSource
         myCollectionView.dataSource = self
         displayImageView.isUserInteractionEnabled = true  // Gestureの許可
@@ -60,7 +60,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UICollec
                 phImageManager.requestImage(for: asset, targetSize: CGSize(width: 320,height:320), contentMode: .aspectFill, options: nil, resultHandler: {
                         ( image , info)  in
                         self.displayImageView.image = image as? UIImage
-                    
+
                 })
             }
             
@@ -70,14 +70,48 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UICollec
             
             ////////画像の一番最後が表示された。最後だけやる方法ないかな？？/////////////////////
         
-        
+        myScrollView.delegate = self
+        myScrollView.addSubview(displayImageView)
+
         
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        initScrollImage()
+    }
 
-//    func calculator(_ calculator: CalculatorKeyboard, didChangeValue value: String) {
-//            inputText.text = value
-//    }
+
+    
+    @IBAction func doubleTapImageView(_ sender: UITapGestureRecognizer) {
+        print("myScrollView.zoomScale:\(myScrollView.zoomScale)")
+        print("myScrollView.maximumZoomScale:\(myScrollView.maximumZoomScale)")
+
+        if ( myScrollView.zoomScale < myScrollView.maximumZoomScale) {
+            let newScale = myScrollView.zoomScale * 3
+            let zoomRect = self.zoomRectForScale(scale: newScale, center: sender.location(in: sender.view) )
+            myScrollView.zoom(to: zoomRect, animated: true)
+            
+        } else {
+            myScrollView.setZoomScale(1.0, animated: true)
+        }
+    }
+
+    func zoomRectForScale(scale:CGFloat, center: CGPoint) -> CGRect{
+        let size = CGSize(
+            width: self.myScrollView.frame.size.width / scale,
+            height: self.myScrollView.frame.size.height / scale
+        )
+        print("zoomRectForScale.size: \(size)")
+        return CGRect(
+            origin: CGPoint(
+                x: center.x - size.width / 2.0,
+                y: center.y - size.height / 2.0
+            ),
+            size: size
+        )
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = myCollectionView.dequeueReusableCell(withReuseIdentifier: "cellta", for: indexPath)
@@ -132,7 +166,49 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UICollec
 //
 //        }
 //    }
-
+    
+    //==============================
+    // ScrolView
+    //==============================
+    func initScrollImage() {
+        print("initScrollImage")
+        if let size = displayImageView.image?.size {
+            // imageViewのサイズがscrollView内に収まるように調整
+//            let wrate = myScrollView.frame.width / size.width
+//            let hrate = myScrollView.frame.height / size.height
+//            let rate = min(wrate, hrate , 1)
+//            displayImageView.frame.size = CGSize(width: size.width * rate , height: size.height * rate)
+            
+            // contentSizeを画像サイズに設定
+            myScrollView.contentSize = displayImageView.frame.size
+            // 初期表示のためcontentInsetを更新
+            updateScrollInset()
+        }
+        
+    }
+    func updateScrollInset()
+    {
+        // imageViewの大きさからcontentInsetを再計算
+        // 0を下回らないようにする
+        myScrollView.contentInset = UIEdgeInsetsMake(
+            max((myScrollView.frame.height - displayImageView.frame.height)/2, 0)
+            ,max((myScrollView.frame.width - displayImageView.frame.width)/2, 0)
+            , 0
+            , 0
+        )
+        
+    }
+    
+    
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        print("pinch")
+        return self.displayImageView
+    }
+    
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        updateScrollInset()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
