@@ -65,13 +65,9 @@
                                 <rect key="frame" x="0.0" y="215" width="375" height="178"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hp3-sW-Hdh">
-                                        <rect key="frame" x="-113" y="-101" width="605" height="362"/>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rKN-ns-f4T">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="178"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="nEu-ZW-V3v" appends="YES" id="pPI-Oj-OwL"/>
-                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -83,7 +79,6 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="displayImageView" destination="hp3-sW-Hdh" id="OMZ-FO-JTJ"/>
                         <outlet property="inputText" destination="ety-pb-eqE" id="3ag-fc-Afh"/>
                         <outlet property="myCollectionView" destination="2Jy-LF-q8U" id="W4z-7N-cq8"/>
                         <outlet property="myScrollView" destination="hIq-XS-19z" id="gSW-9G-cUS"/>

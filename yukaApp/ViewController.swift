@@ -20,7 +20,8 @@ class ViewController: UIViewController
     ,UIScrollViewDelegate
 {
 
-    @IBOutlet weak var displayImageView: UIImageView!
+   // @IBOutlet weak var displayImageView: UIImageView!
+    var displayImageView: UIImageView = UIImageView()
     
     @IBOutlet weak var inputText: UITextField!
     
@@ -33,69 +34,23 @@ class ViewController: UIViewController
         
         // MARK: - UICollectionViewDataSource
         myCollectionView.dataSource = self
-        displayImageView.isUserInteractionEnabled = true  // Gestureの許可
+ 
 
-        ///////////////////////////////試し中
-        var assetss:PHFetchResult = PHAsset.fetchAssets(with: .image, options: nil)
-        print(assetss.debugDescription);
-        assetss.enumerateObjects({ ( obj , idx , stop) in
-            
-            if obj is PHAsset
-            {
-                let asset:PHAsset = obj as PHAsset;
-                print("FetchResult count:\(assetss.count)")
-                print("Asset IDX:\(idx)");
-                print("mediaType:\(asset.mediaType)");
-                print("mediaSubtypes:\(asset.mediaSubtypes)");
-                print("pixelWidth:\(asset.pixelWidth)");
-                print("pixelHeight:\(asset.pixelHeight)");
-                print("creationDate:\(asset.creationDate)");
-                print("modificationDate:\(asset.modificationDate)");
-                print("duration:\(asset.duration)");
-                print("favorite:\(asset.isFavorite)");
-                print("hidden:\(asset.isHidden)");
-                print("location:\(asset.location)")
-                
-                let phImageManager:PHImageManager = PHImageManager()
-                phImageManager.requestImage(for: asset, targetSize: CGSize(width: 320,height:320), contentMode: .aspectFill, options: nil, resultHandler: {
-                        ( image , info)  in
-                        self.displayImageView.image = image as? UIImage
 
-                })
-            }
-            
-        });
-            
-            
-            
             ////////画像の一番最後が表示された。最後だけやる方法ないかな？？/////////////////////
-        
-        myScrollView.delegate = self
-        myScrollView.addSubview(displayImageView)
+        displayImageView = UIImageView(image: UIImage(named: "Red-kitten.jpg"))
+        displayImageView.isUserInteractionEnabled = true  // Gestureの許可
+        displayImageView.backgroundColor = UIColor.purple
+        initScrollImage()
 
         
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        initScrollImage()
+        //initScrollImage()
     }
 
-
-    
-    @IBAction func doubleTapImageView(_ sender: UITapGestureRecognizer) {
-        print("myScrollView.zoomScale:\(myScrollView.zoomScale)")
-        print("myScrollView.maximumZoomScale:\(myScrollView.maximumZoomScale)")
-
-        if ( myScrollView.zoomScale < myScrollView.maximumZoomScale) {
-            let newScale = myScrollView.zoomScale * 3
-            let zoomRect = self.zoomRectForScale(scale: newScale, center: sender.location(in: sender.view) )
-            myScrollView.zoom(to: zoomRect, animated: true)
-            
-        } else {
-            myScrollView.setZoomScale(1.0, animated: true)
-        }
-    }
 
     func zoomRectForScale(scale:CGFloat, center: CGPoint) -> CGRect{
         let size = CGSize(
@@ -136,37 +91,7 @@ class ViewController: UIViewController
     }
     
     
-//    func showCamera() {
-//        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
-//            let picker = UIImagePickerController()
-//            picker.modalPresentationStyle = UIModalPresentationStyle.popover
-//            picker.delegate = self
-//            picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
-//
-//            if let popover = picker.popoverPresentationController {
-//                popover.sourceView = self.view
-//                popover.sourceRect = displayImageView.frame
-//                popover.permittedArrowDirections = UIPopoverArrowDirection.any
-//            }
-//            self.present(picker, animated: true, completion: nil)
-//        }
-//    }
 
-    
-//    func showAlbum(){
-//        let sourceType:UIImagePickerControllerSourceType = UIImagePickerControllerSourceType.photoLibrary
-//
-//        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary){
-//            //インスタンスの作成
-//            let cameraPicker = UIImagePickerController()
-//            cameraPicker.sourceType = sourceType
-//            cameraPicker.delegate = self
-//            self.present(cameraPicker, animated: true, completion:  nil)
-//
-//
-//        }
-//    }
-    
     //==============================
     // ScrolView
     //==============================
@@ -174,18 +99,25 @@ class ViewController: UIViewController
         print("initScrollImage")
         if let size = displayImageView.image?.size {
             // imageViewのサイズがscrollView内に収まるように調整
-//            let wrate = myScrollView.frame.width / size.width
-//            let hrate = myScrollView.frame.height / size.height
-//            let rate = min(wrate, hrate , 1)
-//            displayImageView.frame.size = CGSize(width: size.width * rate , height: size.height * rate)
+            let wrate = myScrollView.frame.width / size.width
+            let hrate = myScrollView.frame.height / size.height
+            let rate = min(wrate, hrate , 1)
+            displayImageView.frame.size = CGSize(width: size.width * rate , height: size.height * rate)
+            displayImageView.frame.origin = CGPoint(x: 0.0, y: 0.0)
             
             // contentSizeを画像サイズに設定
             myScrollView.contentSize = displayImageView.frame.size
+            myScrollView.maximumZoomScale = 4.0
+            myScrollView.minimumZoomScale = 1.0
+            
+            myScrollView.delegate = self
+            myScrollView.addSubview(displayImageView)
             // 初期表示のためcontentInsetを更新
             updateScrollInset()
         }
         
     }
+
     func updateScrollInset()
     {
         // imageViewの大きさからcontentInsetを再計算
@@ -200,15 +132,100 @@ class ViewController: UIViewController
     }
     
     
-    
-    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        print("pinch")
-        return self.displayImageView
+
+    var touchPointx = 0.0
+    var toochPointy = 0.0
+    // スクロール中に呼び出され続けるデリゲートメソッド.
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(#function)
     }
     
+    // ズーム中に呼び出され続けるデリゲートメソッド.
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
         updateScrollInset()
     }
+    
+    // ユーザが指でドラッグを開始した場合に呼び出されるデリゲートメソッド.
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        print(#function)
+    }
+    
+    // ユーザがドラッグ後、指を離した際に呼び出されるデリゲートメソッド.
+    // velocity = points / second.
+    // targetContentOffsetは、停止が予想されるポイント？
+    // pagingEnabledがYESの場合には、呼び出されません.
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        print(#function)
+    }
+    
+    // ユーザがドラッグ後、指を離した際に呼び出されるデリゲートメソッド.
+    // decelerateがYESであれば、慣性移動を行っている.
+    //
+    // 指をぴたっと止めると、decelerateはNOになり、
+    // その場合は「scrollViewWillBeginDecelerating:」「scrollViewDidEndDecelerating:」が呼ばれない？
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        print(displayImageView.center)
+        displayImageView.center = scrollView.center
+        print(#function)
+        print(displayImageView.center)
+    }
+    
+    // ユーザがドラッグ後、スクロールが減速する瞬間に呼び出されるデリゲートメソッド.
+    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+        print(#function)
+    }
+    
+    // ユーザがドラッグ後、慣性移動も含め、スクロールが停止した際に呼び出されるデリゲートメソッド.
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        print(#function)
+    }
+    
+    // スクロールのアニメーションが終了した際に呼び出されるデリゲートメソッド.
+    // アニメーションプロパティがNOの場合には呼び出されない.
+    // 【setContentOffset】/【scrollRectVisible:animated:】
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        print(#function)
+    }
+    
+    // ズーム中に呼び出されるデリゲートメソッド.
+    // ズームの値に対応したUIViewを返却する.
+    // nilを返却すると、何も起きない.
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        print(#function)
+        return self.displayImageView
+    }
+    
+    // ズーム開始時に呼び出されるデリゲートメソッド.
+    func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
+        print(#function)
+    }
+    
+    // ズーム完了時(バウンドアニメーション完了時)に呼び出されるデリゲートメソッド.
+    func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
+        print(#function)
+    }
+    
+    // 先頭にスクロールする際に呼び出されるデリゲートメソッド.
+    // NOなら反応しない.
+    func scrollViewShouldScrollToTop(_ scrollView: UIScrollView) -> Bool {
+        print(#function)
+        return true
+    }
+    
+    // 先頭へのスクロールが完了した際に呼び出されるデリゲートメソッド.
+    // すでに先頭にいる場合には呼び出されない.
+    func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
+        print(#function)
+    }
+
+    
+    //ズームのために要指定
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        // ズームのために要指定
+        return displayImageView
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

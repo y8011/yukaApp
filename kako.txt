@@ -1,0 +1,67 @@
+
+
+///////////////////////////////試し中
+var assetss:PHFetchResult = PHAsset.fetchAssets(with: .image, options: nil)
+print(assetss.debugDescription);
+//        assetss.enumerateObjects({ ( obj , idx , stop) in
+
+//            if obj is PHAsset
+//            {
+//                let asset:PHAsset = obj as PHAsset;
+//                print("FetchResult count:\(assetss.count)")
+//                print("Asset IDX:\(idx)");
+//                print("mediaType:\(asset.mediaType)");
+//                print("mediaSubtypes:\(asset.mediaSubtypes)");
+//                print("pixelWidth:\(asset.pixelWidth)");
+//                print("pixelHeight:\(asset.pixelHeight)");
+//                print("creationDate:\(asset.creationDate)");
+//                print("modificationDate:\(asset.modificationDate)");
+//                print("duration:\(asset.duration)");
+//                print("favorite:\(asset.isFavorite)");
+//                print("hidden:\(asset.isHidden)");
+//                print("location:\(asset.location)")
+//
+//                let phImageManager:PHImageManager = PHImageManager()
+//                phImageManager.requestImage(for: asset, targetSize: CGSize(width: 320,height:320), contentMode: .aspectFill, options: nil, resultHandler: {
+//                        ( image , info)  in
+//                        self.displayImageView.image = image as? UIImage
+//
+//                })
+//            }
+//
+//        });
+
+
+//    func showCamera() {
+//        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
+//            let picker = UIImagePickerController()
+//            picker.modalPresentationStyle = UIModalPresentationStyle.popover
+//            picker.delegate = self
+//            picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+//
+//            if let popover = picker.popoverPresentationController {
+//                popover.sourceView = self.view
+//                popover.sourceRect = displayImageView.frame
+//                popover.permittedArrowDirections = UIPopoverArrowDirection.any
+//            }
+//            self.present(picker, animated: true, completion: nil)
+//        }
+//    }
+
+
+//    func showAlbum(){
+//        let sourceType:UIImagePickerControllerSourceType = UIImagePickerControllerSourceType.photoLibrary
+//
+//        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary){
+//            //インスタンスの作成
+//            let cameraPicker = UIImagePickerController()
+//            cameraPicker.sourceType = sourceType
+//            cameraPicker.delegate = self
+//            self.present(cameraPicker, animated: true, completion:  nil)
+//
+//
+//        }
+//    }
+
+
+

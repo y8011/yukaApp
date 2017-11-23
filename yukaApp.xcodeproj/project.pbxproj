@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B2B5167C1FC3CD0900F76FE4 /* IMG_2605.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2B5167B1FC3CD0900F76FE4 /* IMG_2605.jpg */; };
+		B2B5167E1FC3CD4800F76FE4 /* Red-kitten.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2B5167D1FC3CD4800F76FE4 /* Red-kitten.jpg */; };
 		B2F3D12D1FB9AB7300F5393A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F3D12C1FB9AB7300F5393A /* AppDelegate.swift */; };
 		B2F3D12F1FB9AB7300F5393A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F3D12E1FB9AB7300F5393A /* ViewController.swift */; };
 		B2F3D1321FB9AB7300F5393A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F3D1301FB9AB7300F5393A /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		B2B0153C1FBBC8C800F43D92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2B5167B1FC3CD0900F76FE4 /* IMG_2605.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2605.jpg; sourceTree = "<group>"; };
+		B2B5167D1FC3CD4800F76FE4 /* Red-kitten.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Red-kitten.jpg"; sourceTree = "<group>"; };
 		B2F152CE1FBD10CD00FD9030 /* CalculatorKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CalculatorKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F3D1291FB9AB7300F5393A /* yukaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yukaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F3D12C1FB9AB7300F5393A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 		B2F3D12B1FB9AB7300F5393A /* yukaApp */ = {
 			isa = PBXGroup;
 			children = (
+				B2B5167D1FC3CD4800F76FE4 /* Red-kitten.jpg */,
+				B2B5167B1FC3CD0900F76FE4 /* IMG_2605.jpg */,
 				B2F3D12C1FB9AB7300F5393A /* AppDelegate.swift */,
 				B2F3D12E1FB9AB7300F5393A /* ViewController.swift */,
 				B2F3D1301FB9AB7300F5393A /* Main.storyboard */,
@@ -256,9 +262,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2B5167C1FC3CD0900F76FE4 /* IMG_2605.jpg in Resources */,
 				B2F3D1371FB9AB7300F5393A /* __LaunchScreen.storyboard in Resources */,
 				B2F3D1341FB9AB7300F5393A /* Assets.xcassets in Resources */,
 				B2FFD30B1FC1C5FF0008DBF1 /* LaunchScreen.storyboard in Resources */,
+				B2B5167E1FC3CD4800F76FE4 /* Red-kitten.jpg in Resources */,
 				B2F3D1321FB9AB7300F5393A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
