@@ -1,0 +1,876 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		196F9B06AEF4C167279965137AF91291 /* ActionCell-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B76BD4DE3C50AEC516A46726E99D1E25 /* ActionCell-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BEC2E804AB869D547F7FAAA860CB842 /* Pods-yukaAppUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D26B404C13FC3606B67A997231F2C2 /* Pods-yukaAppUITests-dummy.m */; };
+		29C608B845F553CDB2DC7F580705A3D3 /* Pods-yukaApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD35FA3CCC90264C14A874396E086F61 /* Pods-yukaApp-dummy.m */; };
+		2D7C3499DB66711F956745A66B5FAAA3 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A078978C88EFB87487105282B04EF39 /* UITableViewCell+Extension.swift */; };
+		3696DFD08E521D994ACC708FD61865DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		7421DFA3FD0C7DE9C1B905D3DD9CE6B1 /* Pods-yukaAppUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 41D93D492DFCEDF137DD8515A915B35C /* Pods-yukaAppUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76C593695E292A9D5865E0BF2A564DBA /* ActionCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91032808E05803E91F6DA78389C8B9E2 /* ActionCell-dummy.m */; };
+		8EAEFBDF73BF61EB80E924D693B6C336 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		A3E2B30FC5838450DB9AFC3EF05B8E51 /* Pods-yukaApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 455DD9AF773FA6CC4ABC28803BF977E2 /* Pods-yukaApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEA00A4F8C461E80A20C5549E8522BAB /* Pods-yukaAppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EC1A10073325A1089485944E85FB0D3 /* Pods-yukaAppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B707288B0A11C38D9343D116B88541E9 /* ActionCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 322DBD6A7F9BFDBFB8461082DC84A1A9 /* ActionCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5848A11D8643515063B727C5FAD9152 /* ActionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D910691FAD96B285CF2A011E6AA0FA35 /* ActionControl.swift */; };
+		CD1FF1AFA7B016381BFFBC542B91953E /* Pods-yukaAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EB43A51DE68EE9CA6D99AD66FEEB66 /* Pods-yukaAppTests-dummy.m */; };
+		D030AD22984F87B24D1C59CE9A9A6BAD /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A960A36CBFECE60E9D6BB5345D4B953A /* ActionCell.swift */; };
+		D350EA6163135D23A489B69400688517 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		DB24F4353243FC72897C8C09FA1F96A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		FF391EBDAEA567CFB1AE1F06A12F1267 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7C03308BAA075D5CC8CACFB61AC6E75C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 299BAE154D198361CE5FEF7B83BE9780;
+			remoteInfo = ActionCell;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04064EC753AD61119BB0D46825E162BE /* ActionCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ActionCell.xcconfig; sourceTree = "<group>"; };
+		07EB43A51DE68EE9CA6D99AD66FEEB66 /* Pods-yukaAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-yukaAppTests-dummy.m"; sourceTree = "<group>"; };
+		0D69D8A450518781D259AF77B1488F09 /* Pods-yukaApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-yukaApp.modulemap"; sourceTree = "<group>"; };
+		1795EC2D6C6692A254B68B8AF18E5A48 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2074ECCE1598C7BBE7EF55F257422220 /* Pods_yukaAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_yukaAppUITests.framework; path = "Pods-yukaAppUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25E0624E861D5F7EA7734F6AEF635173 /* Pods_yukaAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_yukaAppTests.framework; path = "Pods-yukaAppTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BB28843D93B1DA41C776575FF7D8E8E /* Pods-yukaAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-yukaAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2D65F37ECA2C1272E36AFAAD03EA3446 /* Pods-yukaApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-yukaApp-resources.sh"; sourceTree = "<group>"; };
+		2E16E330BFA76A8E3210C32F7D8CD8D6 /* Pods-yukaAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-yukaAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		322DBD6A7F9BFDBFB8461082DC84A1A9 /* ActionCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionCell.h; path = Framework/ActionCell/ActionCell.h; sourceTree = "<group>"; };
+		3A078978C88EFB87487105282B04EF39 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+Extension.swift"; path = "Framework/ActionCell/UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		41D93D492DFCEDF137DD8515A915B35C /* Pods-yukaAppUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-yukaAppUITests-umbrella.h"; sourceTree = "<group>"; };
+		4526D76117B7CCD6B530E72E515FDF39 /* Pods-yukaApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-yukaApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		455DD9AF773FA6CC4ABC28803BF977E2 /* Pods-yukaApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-yukaApp-umbrella.h"; sourceTree = "<group>"; };
+		4D709CB1F7F43E7715BB5FDE85FB3E74 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53F60C86CCECE8335818C802DC1E5822 /* Pods-yukaAppUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-yukaAppUITests-resources.sh"; sourceTree = "<group>"; };
+		55ED4755F6829C8890DDE57EC86764EB /* Pods-yukaApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-yukaApp-frameworks.sh"; sourceTree = "<group>"; };
+		5EC1A10073325A1089485944E85FB0D3 /* Pods-yukaAppTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-yukaAppTests-umbrella.h"; sourceTree = "<group>"; };
+		5EEC3D673A67603ACB27A547B19010AD /* Pods-yukaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-yukaApp.release.xcconfig"; sourceTree = "<group>"; };
+		6D7583294BDADF6DDE17635BAE0B793F /* ActionCell.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ActionCell.modulemap; sourceTree = "<group>"; };
+		74E699E6A14AAC3C3FAA29B4249B27EB /* Pods-yukaAppTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-yukaAppTests-frameworks.sh"; sourceTree = "<group>"; };
+		886535B47C98ED6C72648E8D2BF03A99 /* Pods-yukaAppTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-yukaAppTests.modulemap"; sourceTree = "<group>"; };
+		8B3216BC0D22543D55D001CF04FA6865 /* Pods-yukaAppUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-yukaAppUITests.modulemap"; sourceTree = "<group>"; };
+		8D7675CED93D3CDD779836AC90B17D78 /* Pods-yukaAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-yukaAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		91032808E05803E91F6DA78389C8B9E2 /* ActionCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ActionCell-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94E5770D66A236E88610092252D9CCEF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EB66CB6B1A326DF4F07D46CDFE701C9 /* Pods-yukaAppUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-yukaAppUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		A960A36CBFECE60E9D6BB5345D4B953A /* ActionCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionCell.swift; path = Framework/ActionCell/ActionCell.swift; sourceTree = "<group>"; };
+		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B76BD4DE3C50AEC516A46726E99D1E25 /* ActionCell-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActionCell-umbrella.h"; sourceTree = "<group>"; };
+		B7724DEB16BAAE751820F4EB33843616 /* ActionCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActionCell-prefix.pch"; sourceTree = "<group>"; };
+		BBA3493D4619DB3FE45ABD7CCBBACDC3 /* Pods-yukaApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-yukaApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C620218241E33B304838CB315086D665 /* Pods-yukaAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-yukaAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C724E69195077D3800F447069D9AA505 /* Pods_yukaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_yukaApp.framework; path = "Pods-yukaApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC4342806EC391046EC433AF2B5A7F87 /* Pods-yukaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-yukaApp.debug.xcconfig"; sourceTree = "<group>"; };
+		CD35FA3CCC90264C14A874396E086F61 /* Pods-yukaApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-yukaApp-dummy.m"; sourceTree = "<group>"; };
+		D8633E4FED0E12155E2605F5397171AC /* Pods-yukaAppTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-yukaAppTests-resources.sh"; sourceTree = "<group>"; };
+		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D910691FAD96B285CF2A011E6AA0FA35 /* ActionControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionControl.swift; path = Framework/ActionCell/ActionControl.swift; sourceTree = "<group>"; };
+		EC2E912890D63FB507C9A12A19E71795 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0D26B404C13FC3606B67A997231F2C2 /* Pods-yukaAppUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-yukaAppUITests-dummy.m"; sourceTree = "<group>"; };
+		F0FC803D82FC98B1E73DD6C7C0AA4503 /* ActionCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ActionCell.framework; path = ActionCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F49A8922F78C039AFCA35B082E2EAC51 /* Pods-yukaAppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-yukaAppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F63062CE094FA0DBF2FB01F90D67F821 /* Pods-yukaAppUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-yukaAppUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F9702B6941E0BE9C76E7070E87A7311A /* Pods-yukaAppUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-yukaAppUITests-frameworks.sh"; sourceTree = "<group>"; };
+		FFE606FCFECF055100A37DE30ACBFF91 /* Pods-yukaAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-yukaAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		214DC2F81CA4246333005BFB197CFCFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF391EBDAEA567CFB1AE1F06A12F1267 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72CA64EB93684AAE25816FE30B0C8A3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D350EA6163135D23A489B69400688517 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5FD1D12039FFF0ED4E91D873A78772F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3696DFD08E521D994ACC708FD61865DD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC54ECAEFE4606D734F2A22957BD9DF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB24F4353243FC72897C8C09FA1F96A9 /* Foundation.framework in Frameworks */,
+				8EAEFBDF73BF61EB80E924D693B6C336 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		058A7B5F66479E207C1EDBF83F4BAC75 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				375D6E17F6855C639AFFDF1FE0553D51 /* Pods-yukaApp */,
+				429CDC8E9AFED732F9C018D773CD7895 /* Pods-yukaAppTests */,
+				42D8A6E29ABFEB8CC38A3FBEFB465D63 /* Pods-yukaAppUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2826DC517955371F398909E9ACAEC310 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0FC803D82FC98B1E73DD6C7C0AA4503 /* ActionCell.framework */,
+				C724E69195077D3800F447069D9AA505 /* Pods_yukaApp.framework */,
+				25E0624E861D5F7EA7734F6AEF635173 /* Pods_yukaAppTests.framework */,
+				2074ECCE1598C7BBE7EF55F257422220 /* Pods_yukaAppUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		375D6E17F6855C639AFFDF1FE0553D51 /* Pods-yukaApp */ = {
+			isa = PBXGroup;
+			children = (
+				1795EC2D6C6692A254B68B8AF18E5A48 /* Info.plist */,
+				0D69D8A450518781D259AF77B1488F09 /* Pods-yukaApp.modulemap */,
+				BBA3493D4619DB3FE45ABD7CCBBACDC3 /* Pods-yukaApp-acknowledgements.markdown */,
+				4526D76117B7CCD6B530E72E515FDF39 /* Pods-yukaApp-acknowledgements.plist */,
+				CD35FA3CCC90264C14A874396E086F61 /* Pods-yukaApp-dummy.m */,
+				55ED4755F6829C8890DDE57EC86764EB /* Pods-yukaApp-frameworks.sh */,
+				2D65F37ECA2C1272E36AFAAD03EA3446 /* Pods-yukaApp-resources.sh */,
+				455DD9AF773FA6CC4ABC28803BF977E2 /* Pods-yukaApp-umbrella.h */,
+				CC4342806EC391046EC433AF2B5A7F87 /* Pods-yukaApp.debug.xcconfig */,
+				5EEC3D673A67603ACB27A547B19010AD /* Pods-yukaApp.release.xcconfig */,
+			);
+			name = "Pods-yukaApp";
+			path = "Target Support Files/Pods-yukaApp";
+			sourceTree = "<group>";
+		};
+		429CDC8E9AFED732F9C018D773CD7895 /* Pods-yukaAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				4D709CB1F7F43E7715BB5FDE85FB3E74 /* Info.plist */,
+				886535B47C98ED6C72648E8D2BF03A99 /* Pods-yukaAppTests.modulemap */,
+				F49A8922F78C039AFCA35B082E2EAC51 /* Pods-yukaAppTests-acknowledgements.markdown */,
+				2BB28843D93B1DA41C776575FF7D8E8E /* Pods-yukaAppTests-acknowledgements.plist */,
+				07EB43A51DE68EE9CA6D99AD66FEEB66 /* Pods-yukaAppTests-dummy.m */,
+				74E699E6A14AAC3C3FAA29B4249B27EB /* Pods-yukaAppTests-frameworks.sh */,
+				D8633E4FED0E12155E2605F5397171AC /* Pods-yukaAppTests-resources.sh */,
+				5EC1A10073325A1089485944E85FB0D3 /* Pods-yukaAppTests-umbrella.h */,
+				C620218241E33B304838CB315086D665 /* Pods-yukaAppTests.debug.xcconfig */,
+				8D7675CED93D3CDD779836AC90B17D78 /* Pods-yukaAppTests.release.xcconfig */,
+			);
+			name = "Pods-yukaAppTests";
+			path = "Target Support Files/Pods-yukaAppTests";
+			sourceTree = "<group>";
+		};
+		42D8A6E29ABFEB8CC38A3FBEFB465D63 /* Pods-yukaAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				94E5770D66A236E88610092252D9CCEF /* Info.plist */,
+				8B3216BC0D22543D55D001CF04FA6865 /* Pods-yukaAppUITests.modulemap */,
+				F63062CE094FA0DBF2FB01F90D67F821 /* Pods-yukaAppUITests-acknowledgements.markdown */,
+				9EB66CB6B1A326DF4F07D46CDFE701C9 /* Pods-yukaAppUITests-acknowledgements.plist */,
+				F0D26B404C13FC3606B67A997231F2C2 /* Pods-yukaAppUITests-dummy.m */,
+				F9702B6941E0BE9C76E7070E87A7311A /* Pods-yukaAppUITests-frameworks.sh */,
+				53F60C86CCECE8335818C802DC1E5822 /* Pods-yukaAppUITests-resources.sh */,
+				41D93D492DFCEDF137DD8515A915B35C /* Pods-yukaAppUITests-umbrella.h */,
+				FFE606FCFECF055100A37DE30ACBFF91 /* Pods-yukaAppUITests.debug.xcconfig */,
+				2E16E330BFA76A8E3210C32F7D8CD8D6 /* Pods-yukaAppUITests.release.xcconfig */,
+			);
+			name = "Pods-yukaAppUITests";
+			path = "Target Support Files/Pods-yukaAppUITests";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
+				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		46F56E4C0DE838E77D5C88E67E7AAD1D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B25915737014056845631530D9DA3B44 /* ActionCell */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				46F56E4C0DE838E77D5C88E67E7AAD1D /* Pods */,
+				2826DC517955371F398909E9ACAEC310 /* Products */,
+				058A7B5F66479E207C1EDBF83F4BAC75 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8E5957FFBCB76BBAAB4B614FBDAD9728 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D7583294BDADF6DDE17635BAE0B793F /* ActionCell.modulemap */,
+				04064EC753AD61119BB0D46825E162BE /* ActionCell.xcconfig */,
+				91032808E05803E91F6DA78389C8B9E2 /* ActionCell-dummy.m */,
+				B7724DEB16BAAE751820F4EB33843616 /* ActionCell-prefix.pch */,
+				B76BD4DE3C50AEC516A46726E99D1E25 /* ActionCell-umbrella.h */,
+				EC2E912890D63FB507C9A12A19E71795 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ActionCell";
+			sourceTree = "<group>";
+		};
+		B25915737014056845631530D9DA3B44 /* ActionCell */ = {
+			isa = PBXGroup;
+			children = (
+				322DBD6A7F9BFDBFB8461082DC84A1A9 /* ActionCell.h */,
+				A960A36CBFECE60E9D6BB5345D4B953A /* ActionCell.swift */,
+				D910691FAD96B285CF2A011E6AA0FA35 /* ActionControl.swift */,
+				3A078978C88EFB87487105282B04EF39 /* UITableViewCell+Extension.swift */,
+				8E5957FFBCB76BBAAB4B614FBDAD9728 /* Support Files */,
+			);
+			name = ActionCell;
+			path = ActionCell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2BA0442E901A8411E759A2CE0A4D7730 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3E2B30FC5838450DB9AFC3EF05B8E51 /* Pods-yukaApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F30854B04DBF7A09796509B23CF3966 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				196F9B06AEF4C167279965137AF91291 /* ActionCell-umbrella.h in Headers */,
+				B707288B0A11C38D9343D116B88541E9 /* ActionCell.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51604E41D281777D3B8C372FA17F642A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7421DFA3FD0C7DE9C1B905D3DD9CE6B1 /* Pods-yukaAppUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		999C3DE594065FEE87973E338248BB12 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEA00A4F8C461E80A20C5549E8522BAB /* Pods-yukaAppTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		00B2ED5616215E23CBD4DC0C983AC813 /* Pods-yukaApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E5F20D7D88414415F1CBF161715800C /* Build configuration list for PBXNativeTarget "Pods-yukaApp" */;
+			buildPhases = (
+				18A41E2C2C9A6A959939DFE25A2CA157 /* Sources */,
+				72CA64EB93684AAE25816FE30B0C8A3D /* Frameworks */,
+				2BA0442E901A8411E759A2CE0A4D7730 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80ABBE50E5FB561CFA9F94BC1470F4A9 /* PBXTargetDependency */,
+			);
+			name = "Pods-yukaApp";
+			productName = "Pods-yukaApp";
+			productReference = C724E69195077D3800F447069D9AA505 /* Pods_yukaApp.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		11B9C4A30E6EF887C1171829299576C4 /* Pods-yukaAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D906A9D386DB6743CDEDBBCF3778C3A5 /* Build configuration list for PBXNativeTarget "Pods-yukaAppTests" */;
+			buildPhases = (
+				402F821729B5568DF80056BBE5DDB662 /* Sources */,
+				B5FD1D12039FFF0ED4E91D873A78772F /* Frameworks */,
+				999C3DE594065FEE87973E338248BB12 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-yukaAppTests";
+			productName = "Pods-yukaAppTests";
+			productReference = 25E0624E861D5F7EA7734F6AEF635173 /* Pods_yukaAppTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		299BAE154D198361CE5FEF7B83BE9780 /* ActionCell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E578DEB746BC02350E3F38C73FD569F7 /* Build configuration list for PBXNativeTarget "ActionCell" */;
+			buildPhases = (
+				F23DD53D95B974D7E6B900F9238E8A74 /* Sources */,
+				DC54ECAEFE4606D734F2A22957BD9DF1 /* Frameworks */,
+				2F30854B04DBF7A09796509B23CF3966 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ActionCell;
+			productName = ActionCell;
+			productReference = F0FC803D82FC98B1E73DD6C7C0AA4503 /* ActionCell.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		59F44F34892D03619FEA5DF9CC59EE41 /* Pods-yukaAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 785606199E148CA4B746CE59F2C08B13 /* Build configuration list for PBXNativeTarget "Pods-yukaAppUITests" */;
+			buildPhases = (
+				C826A234931652F0265DCECC1600935D /* Sources */,
+				214DC2F81CA4246333005BFB197CFCFD /* Frameworks */,
+				51604E41D281777D3B8C372FA17F642A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-yukaAppUITests";
+			productName = "Pods-yukaAppUITests";
+			productReference = 2074ECCE1598C7BBE7EF55F257422220 /* Pods_yukaAppUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 2826DC517955371F398909E9ACAEC310 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				299BAE154D198361CE5FEF7B83BE9780 /* ActionCell */,
+				00B2ED5616215E23CBD4DC0C983AC813 /* Pods-yukaApp */,
+				11B9C4A30E6EF887C1171829299576C4 /* Pods-yukaAppTests */,
+				59F44F34892D03619FEA5DF9CC59EE41 /* Pods-yukaAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18A41E2C2C9A6A959939DFE25A2CA157 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29C608B845F553CDB2DC7F580705A3D3 /* Pods-yukaApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		402F821729B5568DF80056BBE5DDB662 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD1FF1AFA7B016381BFFBC542B91953E /* Pods-yukaAppTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C826A234931652F0265DCECC1600935D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BEC2E804AB869D547F7FAAA860CB842 /* Pods-yukaAppUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F23DD53D95B974D7E6B900F9238E8A74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76C593695E292A9D5865E0BF2A564DBA /* ActionCell-dummy.m in Sources */,
+				D030AD22984F87B24D1C59CE9A9A6BAD /* ActionCell.swift in Sources */,
+				C5848A11D8643515063B727C5FAD9152 /* ActionControl.swift in Sources */,
+				2D7C3499DB66711F956745A66B5FAAA3 /* UITableViewCell+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		80ABBE50E5FB561CFA9F94BC1470F4A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ActionCell;
+			target = 299BAE154D198361CE5FEF7B83BE9780 /* ActionCell */;
+			targetProxy = 7C03308BAA075D5CC8CACFB61AC6E75C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		16A6A9025BD765A87CE3448D210BC215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04064EC753AD61119BB0D46825E162BE /* ActionCell.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ActionCell/ActionCell-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ActionCell/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ActionCell/ActionCell.modulemap";
+				PRODUCT_NAME = ActionCell;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1D23278938ADF334174C5BF2A4B6B1B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		2D96291D68183F04CB0DD4E0B3B11448 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E16E330BFA76A8E3210C32F7D8CD8D6 /* Pods-yukaAppUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-yukaAppUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-yukaAppUITests/Pods-yukaAppUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_yukaAppUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		40F80A6AD22200FC31E8215670C5D147 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D7675CED93D3CDD779836AC90B17D78 /* Pods-yukaAppTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-yukaAppTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-yukaAppTests/Pods-yukaAppTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_yukaAppTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		476E765A019B5761D52E640080C5D507 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC4342806EC391046EC433AF2B5A7F87 /* Pods-yukaApp.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-yukaApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-yukaApp/Pods-yukaApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_yukaApp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7ED1715924A617A3140FCB569897DCD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04064EC753AD61119BB0D46825E162BE /* ActionCell.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ActionCell/ActionCell-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ActionCell/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ActionCell/ActionCell.modulemap";
+				PRODUCT_NAME = ActionCell;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		995C3A53DEAA96B47E756185345E180D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B33283AAD02827E236FB40957ED968C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C620218241E33B304838CB315086D665 /* Pods-yukaAppTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-yukaAppTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-yukaAppTests/Pods-yukaAppTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_yukaAppTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E98154F189C2F3BD9F0B86A5220EF368 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFE606FCFECF055100A37DE30ACBFF91 /* Pods-yukaAppUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-yukaAppUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-yukaAppUITests/Pods-yukaAppUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_yukaAppUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F7CD59F880263F76874C050002362BDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EEC3D673A67603ACB27A547B19010AD /* Pods-yukaApp.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-yukaApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-yukaApp/Pods-yukaApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_yukaApp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				995C3A53DEAA96B47E756185345E180D /* Debug */,
+				1D23278938ADF334174C5BF2A4B6B1B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		785606199E148CA4B746CE59F2C08B13 /* Build configuration list for PBXNativeTarget "Pods-yukaAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E98154F189C2F3BD9F0B86A5220EF368 /* Debug */,
+				2D96291D68183F04CB0DD4E0B3B11448 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E5F20D7D88414415F1CBF161715800C /* Build configuration list for PBXNativeTarget "Pods-yukaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				476E765A019B5761D52E640080C5D507 /* Debug */,
+				F7CD59F880263F76874C050002362BDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D906A9D386DB6743CDEDBBCF3778C3A5 /* Build configuration list for PBXNativeTarget "Pods-yukaAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B33283AAD02827E236FB40957ED968C1 /* Debug */,
+				40F80A6AD22200FC31E8215670C5D147 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E578DEB746BC02350E3F38C73FD569F7 /* Build configuration list for PBXNativeTarget "ActionCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7ED1715924A617A3140FCB569897DCD9 /* Debug */,
+				16A6A9025BD765A87CE3448D210BC215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

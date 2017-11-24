@@ -1,0 +1,12 @@
+PODS:
+  - ActionCell (2.0.9)
+
+DEPENDENCIES:
+  - ActionCell (~> 2.0.0)
+
+SPEC CHECKSUMS:
+  ActionCell: 302a045ac5b1a0b6a2d8d08d93e1e166ac44f1ae
+
+PODFILE CHECKSUM: 78ed7038672904845f17e74aec8655d6cbb8afb6
+
+COCOAPODS: 1.3.1

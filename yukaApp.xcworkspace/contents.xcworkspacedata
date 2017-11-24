@@ -7,4 +7,7 @@
    <FileRef
       location = "group:../library/forCalc/CalculatorKeyboard-master/CalculatorKeyboard.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
 </Workspace>

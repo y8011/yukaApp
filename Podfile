@@ -6,11 +6,14 @@ target 'yukaApp' do
   use_frameworks!
 
   # Pods for yukaApp
+    pod 'ActionCell', '~> 2.0.0'
+
 
   target 'yukaAppTests' do
     inherit! :search_paths
     # Pods for testing
   end
+
 
   target 'yukaAppUITests' do
     inherit! :search_paths

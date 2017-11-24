@@ -10,6 +10,7 @@ import UIKit
 import Photos  //?
 import MobileCoreServices //?
 //import CalculatorKeyboard
+import ActionCell
 
 
 //class ViewController: UIViewController,UIImagePickerControllerDelegate, CalculatorDelegate {
@@ -18,16 +19,23 @@ class ViewController: UIViewController
     ,UICollectionViewDataSource
     ,UINavigationControllerDelegate
     ,UIScrollViewDelegate
+//    , CalculatorDelegate
+    ,UITableViewDelegate
+    ,UITableViewDataSource
 {
 
    // @IBOutlet weak var displayImageView: UIImageView!
     var displayImageView: UIImageView = UIImageView()
+    var output:UILabel = UILabel()
     
     @IBOutlet weak var inputText: UITextField!
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     
     @IBOutlet weak var myScrollView: UIScrollView!
+    
+    @IBOutlet weak var myTableView: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +50,17 @@ class ViewController: UIViewController
         displayImageView.isUserInteractionEnabled = true  // Gestureの許可
         displayImageView.backgroundColor = UIColor.purple
         initScrollImage()
-
+        
+        //TableViewとCellの設定
+                myTableView.dataSource = self
+                myTableView.delegate   = self
+                myTableView.register(CustomTableViewCell.self, forCellReuseIdentifier: "cellta")
+    
+        
+        output.frame = CGRect(x: 10, y: 10, width: 100, height: 20)
+        output.textAlignment = .center
+        output.backgroundColor = UIColor.lightGray
+        self.view.addSubview(output)
         
     }
     
@@ -67,7 +85,10 @@ class ViewController: UIViewController
         )
     }
     
-    
+ 
+    //============================
+    //collectionView
+    //============================
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = myCollectionView.dequeueReusableCell(withReuseIdentifier: "cellta", for: indexPath)
         
@@ -90,7 +111,311 @@ class ViewController: UIViewController
         let strURL = myDefault.string(forKey: "selectedPhotoURL")
     }
     
+    //=============================
+    //TableView
+    //=============================
     
+    var rirekiResult:[String] = []
+    
+    //2.行数の決定
+    // numberofrowsInSection
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+        return 10
+        
+        //return rirekiResult.count
+        
+    }
+    
+
+    //3.リストに表示する文字列を決定し、表示
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //文字列を表示するせるの取得（セルの再利用）
+        //indexPath 行番号とかいろいろ入っている　セルを指定する時によく使う
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cellko", for: indexPath)
+        
+        
+            //表示したい文字の設定
+//            cell.textLabel?.text = "\(indexPath.row)行目"
+
+        switch (indexPath as NSIndexPath).row {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellta", for: indexPath)
+            cell.textLabel?.text = "style: ladder"
+            let wrapper = ActionCell()
+            wrapper.delegate = self
+            wrapper.animationStyle = .ladder
+            wrapper.wrap(cell: cell,
+                         actionsLeft: [
+                            {
+                                let action = IconTextAction(action: "cell 0 -- left 0")
+                                action.icon.image = #imageLiteral(resourceName: "image_5").withRenderingMode(.alwaysTemplate)
+                                action.icon.tintColor = UIColor.white
+                                action.label.text = "Hello"
+                                action.label.font = UIFont.systemFont(ofSize: 12)
+                                action.label.textColor = UIColor.white
+                                action.backgroundColor = UIColor(red:0.14, green:0.69, blue:0.67, alpha:1.00)
+                                return action
+                            }(),
+                            {
+                                let action = TextAction(action: "cell 0 -- left 1")
+                                action.label.text = "Long Sentence"
+                                action.label.font = UIFont.systemFont(ofSize: 12)
+                                action.label.textColor = UIColor.white
+                                action.backgroundColor = UIColor(red:1.00, green:0.78, blue:0.80, alpha:1.00)
+                                return action
+                            }(),
+                            {
+                                let action = IconAction(action: "cell 0 -- left 2")
+                                action.icon.image = #imageLiteral(resourceName: "image_0").withRenderingMode(.alwaysTemplate)
+                                action.icon.tintColor = UIColor.white
+                                action.backgroundColor = UIColor(red:0.51, green:0.83, blue:0.73, alpha:1.00)
+                                return action
+                            }(),
+                            ],
+                         actionsRight: [
+                            {
+                                let action = IconTextAction(action: "cell 0 -- right 0")
+                                action.icon.image = #imageLiteral(resourceName: "image_1").withRenderingMode(.alwaysTemplate)
+                                action.icon.tintColor = UIColor.white
+                                action.label.text = "Hello"
+                                action.label.font = UIFont.systemFont(ofSize: 12)
+                                action.label.textColor = UIColor.white
+                                action.backgroundColor = UIColor(red:0.14, green:0.69, blue:0.67, alpha:1.00)
+                                return action
+                            }(),
+                            {
+                                let action = TextAction(action: "cell 0 -- right 1")
+                                action.label.text = "Long Sentence"
+                                action.label.font = UIFont.systemFont(ofSize: 12)
+                                action.label.textColor = UIColor.white
+                                action.backgroundColor = UIColor(red:0.51, green:0.83, blue:0.73, alpha:1.00)
+                                return action
+                            }(),
+                            {
+                                let action = IconAction(action: "cell 0 -- right 2")
+                                action.icon.image = #imageLiteral(resourceName: "image_2").withRenderingMode(.alwaysTemplate)
+                                action.icon.tintColor = UIColor.white
+                                action.backgroundColor = UIColor(red:1.00, green:0.78, blue:0.80, alpha:1.00)
+                                return action
+                            }(),
+                            ])
+            return cell
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellta", for: indexPath)
+            cell.textLabel?.text = "style: ladder_emergence"
+            let wrapper = ActionCell()
+            wrapper.delegate = self
+            wrapper.animationStyle = .ladder_emergence
+            wrapper.wrap(cell: cell,
+                         actionsLeft: [
+                            {
+                                let action = IconTextAction(action: "cell 1 -- left 0")
+                                action.icon.image = #imageLiteral(resourceName: "image_5").withRenderingMode(.alwaysTemplate)
+                                action.icon.tintColor = UIColor.white
+                                action.label.text = "Hello"
+                                action.label.font = UIFont.systemFont(ofSize: 12)
+                                action.label.textColor = UIColor.white
+                                action.backgroundColor = UIColor(red:0.14, green:0.69, blue:0.67, alpha:1.00)
+                                return action
+                            }(),
+                            {
+                                let action = TextAction(action: "cell 1 -- left 1")
+                                action.label.text = "Long Sentence"
+                                action.label.font = UIFont.systemFont(ofSize: 12)
+                                action.label.textColor = UIColor.white
+                                action.backgroundColor = UIColor(red:1.00, green:0.78, blue:0.80, alpha:1.00)
+                                return action
+                            }(),
+                            {
+                                let action = IconAction(action: "cell 1 -- left 2")
+                                action.icon.image = #imageLiteral(resourceName: "image_0").withRenderingMode(.alwaysTemplate)
+                                action.icon.tintColor = UIColor.white
+                                action.backgroundColor = UIColor(red:0.51, green:0.83, blue:0.73, alpha:1.00)
+                                return action
+                            }(),
+                            ],
+                         actionsRight: [
+                            {
+                                let action = IconTextAction(action: "cell 1 -- right 0")
+                                action.icon.image = #imageLiteral(resourceName: "image_1").withRenderingMode(.alwaysTemplate)
+                                action.icon.tintColor = UIColor.white
+                                action.label.text = "Hello"
+                                action.label.font = UIFont.systemFont(ofSize: 12)
+                                action.label.textColor = UIColor.white
+                                action.backgroundColor = UIColor(red:0.14, green:0.69, blue:0.67, alpha:1.00)
+                                return action
+                            }(),
+                            {
+                                let action = TextAction(action: "cell 1 -- right 1")
+                                action.label.text = "Long Sentence"
+                                action.label.font = UIFont.systemFont(ofSize: 12)
+                                action.label.textColor = UIColor.white
+                                action.backgroundColor = UIColor(red:0.51, green:0.83, blue:0.73, alpha:1.00)
+                                return action
+                            }(),
+                            {
+                                let action = IconAction(action: "cell 1 -- right 2")
+                                action.icon.image = #imageLiteral(resourceName: "image_2").withRenderingMode(.alwaysTemplate)
+                                action.icon.tintColor = UIColor.white
+                                action.backgroundColor = UIColor(red:1.00, green:0.78, blue:0.80, alpha:1.00)
+                                return action
+                            }(),
+                            ])
+            return cell
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellko", for: indexPath)
+            cell.textLabel?.text = "style: concurrent"
+            let wrapper = ActionCell()
+            wrapper.delegate = self
+            wrapper.animationStyle = .concurrent
+            wrapper.wrap(cell: cell,
+                         actionsLeft: [
+                            {
+                                let action = IconTextAction(action: "cell 2 -- left 0")
+                                action.icon.image = #imageLiteral(resourceName: "image_5").withRenderingMode(.alwaysTemplate)
+                                action.icon.tintColor = UIColor.white
+                                action.label.text = "Hello"
+                                action.label.font = UIFont.systemFont(ofSize: 12)
+                                action.label.textColor = UIColor.white
+                                action.backgroundColor = UIColor(red:0.14, green:0.69, blue:0.67, alpha:1.00)
+                                return action
+                            }(),
+                            {
+                                let action = TextAction(action: "cell 2 -- left 1")
+                                action.label.text = "Long Sentence"
+                                action.label.font = UIFont.systemFont(ofSize: 12)
+                                action.label.textColor = UIColor.white
+                                action.backgroundColor = UIColor(red:1.00, green:0.78, blue:0.80, alpha:1.00)
+                                return action
+                            }(),
+                            {
+                                let action = IconAction(action: "cell 2 -- left 2")
+                                action.icon.image = #imageLiteral(resourceName: "image_0").withRenderingMode(.alwaysTemplate)
+                                action.icon.tintColor = UIColor.white
+                                action.backgroundColor = UIColor(red:0.51, green:0.83, blue:0.73, alpha:1.00)
+                                return action
+                            }(),
+                            ],
+                         actionsRight: [
+                            {
+                                let action = IconTextAction(action: "cell 2 -- right 0")
+                                action.icon.image = #imageLiteral(resourceName: "image_1").withRenderingMode(.alwaysTemplate)
+                                action.icon.tintColor = UIColor.white
+                                action.label.text = "Hello"
+                                action.label.font = UIFont.systemFont(ofSize: 12)
+                                action.label.textColor = UIColor.white
+                                action.backgroundColor = UIColor(red:0.14, green:0.69, blue:0.67, alpha:1.00)
+                                return action
+                            }(),
+                            {
+                                let action = TextAction(action: "cell 2 -- right 1")
+                                action.label.text = "Long Sentence"
+                                action.label.font = UIFont.systemFont(ofSize: 12)
+                                action.label.textColor = UIColor.white
+                                action.backgroundColor = UIColor(red:0.51, green:0.83, blue:0.73, alpha:1.00)
+                                return action
+                            }(),
+                            {
+                                let action = IconAction(action: "cell 2 -- right 2")
+                                action.icon.image = #imageLiteral(resourceName: "image_2").withRenderingMode(.alwaysTemplate)
+                                action.icon.tintColor = UIColor.white
+                                action.backgroundColor = UIColor(red:1.00, green:0.78, blue:0.80, alpha:1.00)
+                                return action
+                            }(),
+                            ])
+            return cell
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellta", for: indexPath) as! CustomTableViewCell
+            cell.accessoryType = .disclosureIndicator
+            cell.button.setTitle("result", for: .normal)
+            cell.button.addTarget(self, action:  #selector(cellButtonClicked(_:))
+                 , for: .touchUpInside)
+            let wrapper = ActionCell()
+            wrapper.delegate = self
+            wrapper.animationStyle = .concurrent
+            wrapper.wrap(cell: cell,
+                         actionsLeft: [
+                            {
+                                let action = IconTextAction(action: "cell 3 -- left 0")
+                                action.icon.image = #imageLiteral(resourceName: "image_5").withRenderingMode(.alwaysTemplate)
+                                action.icon.tintColor = UIColor.white
+                                action.label.text = "Hello"
+                                action.label.font = UIFont.systemFont(ofSize: 12)
+                                action.label.textColor = UIColor.white
+                                action.backgroundColor = UIColor(red:0.14, green:0.69, blue:0.67, alpha:1.00)
+                                return action
+                            }(),
+                            {
+                                let action = TextAction(action: "cell 3 -- left 1")
+                                action.label.text = "Long Sentence"
+                                action.label.font = UIFont.systemFont(ofSize: 12)
+                                action.label.textColor = UIColor.white
+                                action.backgroundColor = UIColor(red:1.00, green:0.78, blue:0.80, alpha:1.00)
+                                return action
+                            }(),
+                            {
+                                let action = IconAction(action: "cell 3 -- left 2")
+                                action.icon.image = #imageLiteral(resourceName: "image_0").withRenderingMode(.alwaysTemplate)
+                                action.icon.tintColor = UIColor.white
+                                action.backgroundColor = UIColor(red:0.51, green:0.83, blue:0.73, alpha:1.00)
+                                return action
+                            }(),
+                            ],
+                         actionsRight: [
+                            {
+                                let action = IconTextAction(action: "cell 3 -- right 0")
+                                action.icon.image = #imageLiteral(resourceName: "image_1").withRenderingMode(.alwaysTemplate)
+                                action.icon.tintColor = UIColor.white
+                                action.label.text = "Hello"
+                                action.label.font = UIFont.systemFont(ofSize: 12)
+                                action.label.textColor = UIColor.white
+                                action.backgroundColor = UIColor(red:0.14, green:0.69, blue:0.67, alpha:1.00)
+                                return action
+                            }(),
+                            {
+                                let action = TextAction(action: "cell 3 -- right 1")
+                                action.label.text = "Long Sentence"
+                                action.label.font = UIFont.systemFont(ofSize: 12)
+                                action.label.textColor = UIColor.white
+                                action.backgroundColor = UIColor(red:0.51, green:0.83, blue:0.73, alpha:1.00)
+                                return action
+                            }(),
+                            {
+                                let action = IconAction(action: "cell 3 -- right 2")
+                                action.icon.image = #imageLiteral(resourceName: "image_2").withRenderingMode(.alwaysTemplate)
+                                action.icon.tintColor = UIColor.white
+                                action.backgroundColor = UIColor(red:1.00, green:0.78, blue:0.80, alpha:1.00)
+                                return action
+                            }(),
+                            ])
+            return cell
+        default:
+            
+            return tableView.dequeueReusableCell(withIdentifier: "cellta", for: indexPath) as! CustomTableViewCell
+              let cell = tableView.dequeueReusableCell(withIdentifier: "cellko", for: indexPath)
+            
+            
+            //表示したい文字の設定
+                        cell.textLabel?.text = "\(indexPath.row)行目"
+            
+            //文字を設定したせるを返す
+            //    return cell
+        }
+    }
+
+    //addTargetでselector通じて引数を渡すことはできない。それ自身を渡すことならできる
+    //なので、テキストラベルに入っているボタンを渡すことにする
+    func cellButtonClicked(_ sender: UIButton) {
+        self.output.text = "cell button clicked"
+        print(#function)
+        let myPasteBoard = UIPasteboard.general
+//        myPasteBoard.string = sender.titleLabel?.text as! String
+        myPasteBoard.string = "aaaa"
+        print(sender.description)
+        print(sender.titleLabel?.text as! String)
+    }
+
 
     //==============================
     // ScrolView
@@ -234,3 +559,48 @@ class ViewController: UIViewController
 
 }
 
+extension ViewController: ActionCellDelegate {
+    var tableView: UITableView! {
+        return myTableView
+        
+    }
+    
+    
+    public func didActionTriggered(cell: UITableViewCell, action: String) {
+        self.output.text = action + " clicked"
+        print(#function)
+        print(action)
+    }
+}
+
+class CustomTableViewCell: UITableViewCell {
+    
+    var button: UIButton!
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        button = {
+            let the = UIButton()
+            the.setTitle("click me", for: .normal)
+            the.setTitleColor(UIColor.white, for: .normal)
+            the.backgroundColor = UIColor.brown
+            return the
+        }()
+        contentView.addSubview(button)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addConstraint(NSLayoutConstraint(item: button, attribute: .centerX, relatedBy: .equal, toItem: contentView, attribute: .centerX, multiplier: 1, constant: 0))
+        contentView.addConstraint(NSLayoutConstraint(item: button, attribute: .centerY, relatedBy: .equal, toItem: contentView, attribute: .centerY, multiplier: 1, constant: 0))
+        contentView.addConstraint(NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 300))
+        contentView.addConstraint(NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 40))
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        clearActionsheet()
+    }
+}

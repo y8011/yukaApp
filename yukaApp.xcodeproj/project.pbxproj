@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10A6519BC5E1183D00185D5A /* Pods_yukaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D618A10A18BE59EBFBA2B03D /* Pods_yukaApp.framework */; };
+		B243976D1FC79D2E001FB78F /* CalculatorKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B243976E1FC79D2E001FB78F /* CalculatorKeyboard.framework */; };
+		B243976F1FC79FF7001FB78F /* CalculatorKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B243976E1FC79D2E001FB78F /* CalculatorKeyboard.framework */; };
+		B24397701FC79FF7001FB78F /* CalculatorKeyboard.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B243976E1FC79D2E001FB78F /* CalculatorKeyboard.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B2B5167C1FC3CD0900F76FE4 /* IMG_2605.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2B5167B1FC3CD0900F76FE4 /* IMG_2605.jpg */; };
 		B2B5167E1FC3CD4800F76FE4 /* Red-kitten.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2B5167D1FC3CD4800F76FE4 /* Red-kitten.jpg */; };
 		B2F3D12D1FB9AB7300F5393A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F3D12C1FB9AB7300F5393A /* AppDelegate.swift */; };
@@ -17,6 +21,8 @@
 		B2F3D1421FB9AB7300F5393A /* yukaAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F3D1411FB9AB7300F5393A /* yukaAppTests.swift */; };
 		B2F3D14D1FB9AB7300F5393A /* yukaAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F3D14C1FB9AB7300F5393A /* yukaAppUITests.swift */; };
 		B2FFD30B1FC1C5FF0008DBF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2FFD30A1FC1C5FF0008DBF1 /* LaunchScreen.storyboard */; };
+		E07369B0BFBC7C909A97DE15 /* Pods_yukaAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D316FE3112BD79276BC93EB /* Pods_yukaAppTests.framework */; };
+		F31FA315409F22F0929D85DC /* Pods_yukaAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93524392E81DDAD56DF307EC /* Pods_yukaAppUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +42,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B24397711FC79FF7001FB78F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B24397701FC79FF7001FB78F /* CalculatorKeyboard.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3059F7C899F4EA65EAA76A8E /* Pods-yukaAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yukaAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yukaAppUITests/Pods-yukaAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A216E1F563E62538AA8084D /* Pods-yukaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yukaApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yukaApp/Pods-yukaApp.debug.xcconfig"; sourceTree = "<group>"; };
+		4D316FE3112BD79276BC93EB /* Pods_yukaAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yukaAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BC9D800A97ACD046ECEAC60 /* Pods-yukaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yukaApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-yukaApp/Pods-yukaApp.release.xcconfig"; sourceTree = "<group>"; };
+		5D89D63425104DCCF6B1A4A3 /* Pods-yukaAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yukaAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-yukaAppTests/Pods-yukaAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		87ABEB59B06DBFAF969A4132 /* Pods-yukaAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yukaAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yukaAppTests/Pods-yukaAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		93524392E81DDAD56DF307EC /* Pods_yukaAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yukaAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B243976E1FC79D2E001FB78F /* CalculatorKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CalculatorKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2B0153C1FBBC8C800F43D92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2B5167B1FC3CD0900F76FE4 /* IMG_2605.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2605.jpg; sourceTree = "<group>"; };
 		B2B5167D1FC3CD4800F76FE4 /* Red-kitten.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Red-kitten.jpg"; sourceTree = "<group>"; };
@@ -55,6 +83,8 @@
 		B2F3D14C1FB9AB7300F5393A /* yukaAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yukaAppUITests.swift; sourceTree = "<group>"; };
 		B2F3D14E1FB9AB7300F5393A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2FFD30A1FC1C5FF0008DBF1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D618A10A18BE59EBFBA2B03D /* Pods_yukaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yukaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA57F81E99DECB609EE683C6 /* Pods-yukaAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yukaAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-yukaAppUITests/Pods-yukaAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +92,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B243976D1FC79D2E001FB78F /* CalculatorKeyboard.framework in Frameworks */,
+				B243976F1FC79FF7001FB78F /* CalculatorKeyboard.framework in Frameworks */,
+				10A6519BC5E1183D00185D5A /* Pods_yukaApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E07369B0BFBC7C909A97DE15 /* Pods_yukaAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F31FA315409F22F0929D85DC /* Pods_yukaAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,8 +120,12 @@
 		B2B0153A1FBBC8C800F43D92 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B243976E1FC79D2E001FB78F /* CalculatorKeyboard.framework */,
 				B2F152CE1FBD10CD00FD9030 /* CalculatorKeyboard.framework */,
 				B2B0153B1FBBC8C800F43D92 /* SVProgressHUD-Framework */,
+				D618A10A18BE59EBFBA2B03D /* Pods_yukaApp.framework */,
+				4D316FE3112BD79276BC93EB /* Pods_yukaAppTests.framework */,
+				93524392E81DDAD56DF307EC /* Pods_yukaAppUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -100,6 +139,19 @@
 			path = "Carthage/Checkouts/SVProgressHUD/SVProgressHUD-Framework";
 			sourceTree = "<group>";
 		};
+		B2F06E9AB0C8FCF95DC16150 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A216E1F563E62538AA8084D /* Pods-yukaApp.debug.xcconfig */,
+				5BC9D800A97ACD046ECEAC60 /* Pods-yukaApp.release.xcconfig */,
+				87ABEB59B06DBFAF969A4132 /* Pods-yukaAppTests.debug.xcconfig */,
+				5D89D63425104DCCF6B1A4A3 /* Pods-yukaAppTests.release.xcconfig */,
+				3059F7C899F4EA65EAA76A8E /* Pods-yukaAppUITests.debug.xcconfig */,
+				EA57F81E99DECB609EE683C6 /* Pods-yukaAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B2F3D1201FB9AB7300F5393A = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +160,7 @@
 				B2F3D14B1FB9AB7300F5393A /* yukaAppUITests */,
 				B2F3D12A1FB9AB7300F5393A /* Products */,
 				B2B0153A1FBBC8C800F43D92 /* Frameworks */,
+				B2F06E9AB0C8FCF95DC16150 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,9 +215,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2F3D1511FB9AB7300F5393A /* Build configuration list for PBXNativeTarget "yukaApp" */;
 			buildPhases = (
+				FD5B8F0B2CD4B29227C7385D /* [CP] Check Pods Manifest.lock */,
 				B2F3D1251FB9AB7300F5393A /* Sources */,
 				B2F3D1261FB9AB7300F5393A /* Frameworks */,
 				B2F3D1271FB9AB7300F5393A /* Resources */,
+				DFAB6B7838C761918672AE08 /* [CP] Embed Pods Frameworks */,
+				431B0A19C3D8EC6B8E666F98 /* [CP] Copy Pods Resources */,
+				B24397711FC79FF7001FB78F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2F3D1541FB9AB7300F5393A /* Build configuration list for PBXNativeTarget "yukaAppTests" */;
 			buildPhases = (
+				3BF3B5F79B73FC5CB9D9AE11 /* [CP] Check Pods Manifest.lock */,
 				B2F3D1391FB9AB7300F5393A /* Sources */,
 				B2F3D13A1FB9AB7300F5393A /* Frameworks */,
 				B2F3D13B1FB9AB7300F5393A /* Resources */,
+				9D0FE0D857C09CAFF4FDDF81 /* [CP] Embed Pods Frameworks */,
+				DCD2A4F7F36DB5BE5D6DC255 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,9 +257,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2F3D1571FB9AB7300F5393A /* Build configuration list for PBXNativeTarget "yukaAppUITests" */;
 			buildPhases = (
+				75B7D12A56444DEE4DE6E801 /* [CP] Check Pods Manifest.lock */,
 				B2F3D1441FB9AB7300F5393A /* Sources */,
 				B2F3D1451FB9AB7300F5393A /* Frameworks */,
 				B2F3D1461FB9AB7300F5393A /* Resources */,
+				E1694D308F1AEEAAC3279EFA /* [CP] Embed Pods Frameworks */,
+				7343C860F280E4916A220C74 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -286,6 +349,156 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3BF3B5F79B73FC5CB9D9AE11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-yukaAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		431B0A19C3D8EC6B8E666F98 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yukaApp/Pods-yukaApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7343C860F280E4916A220C74 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yukaAppUITests/Pods-yukaAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75B7D12A56444DEE4DE6E801 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-yukaAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D0FE0D857C09CAFF4FDDF81 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yukaAppTests/Pods-yukaAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCD2A4F7F36DB5BE5D6DC255 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yukaAppTests/Pods-yukaAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFAB6B7838C761918672AE08 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-yukaApp/Pods-yukaApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ActionCell/ActionCell.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionCell.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yukaApp/Pods-yukaApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1694D308F1AEEAAC3279EFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yukaAppUITests/Pods-yukaAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD5B8F0B2CD4B29227C7385D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-yukaApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B2F3D1251FB9AB7300F5393A /* Sources */ = {
@@ -457,6 +670,7 @@
 		};
 		B2F3D1521FB9AB7300F5393A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A216E1F563E62538AA8084D /* Pods-yukaApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -471,6 +685,7 @@
 		};
 		B2F3D1531FB9AB7300F5393A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BC9D800A97ACD046ECEAC60 /* Pods-yukaApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -485,6 +700,7 @@
 		};
 		B2F3D1551FB9AB7300F5393A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87ABEB59B06DBFAF969A4132 /* Pods-yukaAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -501,6 +717,7 @@
 		};
 		B2F3D1561FB9AB7300F5393A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D89D63425104DCCF6B1A4A3 /* Pods-yukaAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -517,6 +734,7 @@
 		};
 		B2F3D1581FB9AB7300F5393A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3059F7C899F4EA65EAA76A8E /* Pods-yukaAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +750,7 @@
 		};
 		B2F3D1591FB9AB7300F5393A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA57F81E99DECB609EE683C6 /* Pods-yukaAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
