@@ -9,7 +9,7 @@
 import UIKit
 import Photos  //?
 import MobileCoreServices //?
-//import CalculatorKeyboard
+import CalculatorKeyboard
 import ActionCell
 
 
@@ -19,7 +19,7 @@ class ViewController: UIViewController
     ,UICollectionViewDataSource
     ,UINavigationControllerDelegate
     ,UIScrollViewDelegate
-//    , CalculatorDelegate
+    , CalculatorDelegate
     ,UITableViewDelegate
     ,UITableViewDataSource
 {
@@ -27,6 +27,8 @@ class ViewController: UIViewController
    // @IBOutlet weak var displayImageView: UIImageView!
     var displayImageView: UIImageView = UIImageView()
     var output:UILabel = UILabel()
+    var resultText:String = ""
+    var suuji:String = ""
     
     @IBOutlet weak var inputText: UITextField!
     
@@ -36,7 +38,7 @@ class ViewController: UIViewController
     
     @IBOutlet weak var myTableView: UITableView!
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,6 +63,63 @@ class ViewController: UIViewController
         output.textAlignment = .center
         output.backgroundColor = UIColor.lightGray
         self.view.addSubview(output)
+        
+        initCalc()
+
+        
+    }
+    
+    
+    //===============================
+    // 計算機
+    //===============================
+    func calculator(_ calculator: CalculatorKeyboard, didChangeValue value: String, KeyType: Int) {
+        inputText.text = value
+
+        switch KeyType {
+        case CalculatorKey.multiply.rawValue ... CalculatorKey.add.rawValue:
+            if KeyType == CalculatorKey.multiply.rawValue {
+                resultText = resultText + "\(suuji)x"
+            }
+            else if KeyType == CalculatorKey.divide.rawValue {
+                resultText = resultText + "\(suuji)/"
+            }
+            else if KeyType == CalculatorKey.subtract.rawValue {
+                resultText = resultText + "\(suuji)-"
+            }
+            else if KeyType == CalculatorKey.add.rawValue {
+                resultText = resultText + "\(suuji)+"
+            }
+            
+        case CalculatorKey.equal.rawValue :
+            resultText = resultText + "\(suuji) = \(value)"
+            rirekiTexts.append(resultText)
+
+        case CalculatorKey.clear.rawValue:
+            print("けされたぁ")
+            resultText = ""
+        default:
+            break
+            
+        }
+
+        suuji = value
+        print(value)
+        print(resultText)
+
+        
+    }
+    
+    func initCalc() {
+        let frame = CGRect(x:0 , y:0 , width: UIScreen.main.bounds.width, height:300 )
+        var keyboard:CalculatorKeyboard = CalculatorKeyboard()
+        keyboard = CalculatorKeyboard(frame: frame)
+        
+        
+        keyboard.delegate = self
+        keyboard.showDecimal = true
+        inputText.inputView = keyboard
+        
         
     }
     
@@ -116,6 +175,7 @@ class ViewController: UIViewController
     //=============================
     
     var rirekiResult:[String] = []
+    var rirekiTexts:[String] = []
     
     //2.行数の決定
     // numberofrowsInSection
@@ -416,6 +476,11 @@ class ViewController: UIViewController
         print(sender.titleLabel?.text as! String)
     }
 
+    func tapDelete() {
+        let appDalegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let viewContext = appDalegate.persistentContainer.viewContext
+        
+    }
 
     //==============================
     // ScrolView

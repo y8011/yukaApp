@@ -11,6 +11,9 @@
 		B243976D1FC79D2E001FB78F /* CalculatorKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B243976E1FC79D2E001FB78F /* CalculatorKeyboard.framework */; };
 		B243976F1FC79FF7001FB78F /* CalculatorKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B243976E1FC79D2E001FB78F /* CalculatorKeyboard.framework */; };
 		B24397701FC79FF7001FB78F /* CalculatorKeyboard.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B243976E1FC79D2E001FB78F /* CalculatorKeyboard.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B24397741FC7D64B001FB78F /* Pods_yukaApp.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D618A10A18BE59EBFBA2B03D /* Pods_yukaApp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B24397751FC7D655001FB78F /* CalculatorKeyboard.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B243976E1FC79D2E001FB78F /* CalculatorKeyboard.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B26D81421FCC226E0062DE67 /* yukaApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B26D81401FCC226E0062DE67 /* yukaApp.xcdatamodeld */; };
 		B2B5167C1FC3CD0900F76FE4 /* IMG_2605.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2B5167B1FC3CD0900F76FE4 /* IMG_2605.jpg */; };
 		B2B5167E1FC3CD4800F76FE4 /* Red-kitten.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2B5167D1FC3CD4800F76FE4 /* Red-kitten.jpg */; };
 		B2F3D12D1FB9AB7300F5393A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F3D12C1FB9AB7300F5393A /* AppDelegate.swift */; };
@@ -54,6 +57,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B24397731FC7D60B001FB78F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				B24397751FC7D655001FB78F /* CalculatorKeyboard.framework in CopyFiles */,
+				B24397741FC7D64B001FB78F /* Pods_yukaApp.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +79,7 @@
 		87ABEB59B06DBFAF969A4132 /* Pods-yukaAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yukaAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yukaAppTests/Pods-yukaAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		93524392E81DDAD56DF307EC /* Pods_yukaAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yukaAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B243976E1FC79D2E001FB78F /* CalculatorKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CalculatorKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B26D81411FCC226E0062DE67 /* yukaApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = yukaApp.xcdatamodel; sourceTree = "<group>"; };
 		B2B0153C1FBBC8C800F43D92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2B5167B1FC3CD0900F76FE4 /* IMG_2605.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2605.jpg; sourceTree = "<group>"; };
 		B2B5167D1FC3CD4800F76FE4 /* Red-kitten.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Red-kitten.jpg"; sourceTree = "<group>"; };
@@ -181,6 +196,7 @@
 				B2B5167B1FC3CD0900F76FE4 /* IMG_2605.jpg */,
 				B2F3D12C1FB9AB7300F5393A /* AppDelegate.swift */,
 				B2F3D12E1FB9AB7300F5393A /* ViewController.swift */,
+				B26D81401FCC226E0062DE67 /* yukaApp.xcdatamodeld */,
 				B2F3D1301FB9AB7300F5393A /* Main.storyboard */,
 				B2FFD30A1FC1C5FF0008DBF1 /* LaunchScreen.storyboard */,
 				B2F3D1331FB9AB7300F5393A /* Assets.xcassets */,
@@ -222,6 +238,7 @@
 				DFAB6B7838C761918672AE08 /* [CP] Embed Pods Frameworks */,
 				431B0A19C3D8EC6B8E666F98 /* [CP] Copy Pods Resources */,
 				B24397711FC79FF7001FB78F /* Embed Frameworks */,
+				B24397731FC7D60B001FB78F /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -506,6 +523,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2F3D12F1FB9AB7300F5393A /* ViewController.swift in Sources */,
+				B26D81421FCC226E0062DE67 /* yukaApp.xcdatamodeld in Sources */,
 				B2F3D12D1FB9AB7300F5393A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -674,8 +692,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XV8YGZ29G7;
 				INFOPLIST_FILE = yukaApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INSTALL_PATH = "@rpath";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/../Frameworks/";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yukao.yukaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -689,8 +709,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XV8YGZ29G7;
 				INFOPLIST_FILE = yukaApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INSTALL_PATH = "@rpath";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/../Frameworks/";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yukao.yukaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -804,6 +826,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B26D81401FCC226E0062DE67 /* yukaApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B26D81411FCC226E0062DE67 /* yukaApp.xcdatamodel */,
+			);
+			currentVersion = B26D81411FCC226E0062DE67 /* yukaApp.xcdatamodel */;
+			path = yukaApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B2F3D1211FB9AB7300F5393A /* Project object */;
 }
