@@ -66,9 +66,172 @@ class ViewController: UIViewController
         
         initCalc()
 
+       // showAlbum()
+        //savePictureInApp()
         
     }
     
+    
+    // ドキュメント保存
+    
+//    func savePictureInApp () {
+//        let dataUrl = NSURL(string: "assets-library://asset/asset.JPG?id=9F983DBA-EC35-42B8-8773-B597CF782EDD&ext=JPG")
+//        let dataUrl1 = URL(fileURLWithPath: "assets-library://asset/asset.JPG?id=9F983DBA-EC35-42B8-8773-B597CF782EDD&ext=JPG")
+//        //let myData = NSData(contentsOf: url as URL)
+//        var myData1 = UIImage()
+//
+//        if let url = dataUrl {
+//            let fetchResult: PHFetchResult = PHAsset.fetchAssets(withALAssetURLs: [dataUrl1], options: nil)
+////ここでエラー            let asset: PHAsset = fetchResult.firstObject as! PHAsset
+//            let manager = PHImageManager.default()
+//         //   manager.requestImage(for: asset, targetSize: CGSize(width: 140, height: 140), contentMode: .aspectFill, options: nil) { (image, info) in
+//                myData1 = image!
+//            }
+//
+//            var myData = NSData(contentsOf: dataUrl1)
+//
+//            let dataName = "image1.jpg"
+//
+//            let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+//            do {
+//
+//                try myData?.write(toFile: "image2.jpg", options: .noFileProtection)
+//               // try myData1?.write(toFile: "image21.jpg", options: .noFileProtection)
+//                print(myData1)
+//                saveImage(data: myData!, name: dataName)
+//
+//            }
+//            catch{
+//                print("wwwwwww")
+//            }
+//
+////            if let data = myData {
+////                data.write(toFile: "\(documentsPath)/\(dataName)", atomically: true)
+////
+////            }
+//        }
+//    }
+    
+    func storeJpgImageInDocument(image: UIImage , name: String) {
+        let documentDirectory =  NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) // [String]型
+        
+        let dataUrl = URL.init(fileURLWithPath: documentDirectory[0], isDirectory: true) //URL型 Documentpath
+        
+        let dataPath = dataUrl.appendingPathComponent("\(name).jpg") //URL型 documentへのパス + ファイル名
+        
+        let myData = UIImageJPEGRepresentation(image, 1.0)! as NSData // Data?型　→ NSData型
+        
+        print(dataPath.path)
+        myData.write(toFile: dataPath.path , atomically: true) // NSData型の変数.write(String型,Bool型)
+    }
+    
+    func readJpgImageInDocument() {
+        let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) //String型 App以下のフォルダのつもり Documentpath
+        let dataUrl = URL.init(fileURLWithPath: documentDirectory[0], isDirectory: true)  //URL型 Documentpath
+        let dataPath = dataUrl.appendingPathComponent("image1.jpg")
+        
+        let fileExists = FileManager().fileExists(atPath: dataPath.path)
+        do {
+            
+            let myData = try Data(contentsOf: dataUrl, options: [])
+            let image =  UIImage.init(data: myData)
+            
+            print(image)
+            
+            
+        }catch {
+            print(error)
+        }
+
+    }
+
+    func showAlbum(){
+        
+        let sourceType:UIImagePickerControllerSourceType = UIImagePickerControllerSourceType.photoLibrary
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary){
+            //インスタンスの作成
+            let cameraPicker = UIImagePickerController()
+            cameraPicker.sourceType = sourceType
+            cameraPicker.delegate = self
+            self.present(cameraPicker, animated: true, completion:  nil)
+            
+            
+        }
+    }
+    //カメラロールで写真を選んだ後発動
+    func imagePickerController(_ imagePicker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        
+        print(#function)
+        //for camera
+        // UIImagePickerControllerReferenceURL はカメラロールを選択した時だけ存在するので切り分け。
+        if (info.index(forKey: UIImagePickerControllerReferenceURL) == nil) {
+            //imageViewに撮影した写真をセットするために変数に保存する
+            let takenimage = info[UIImagePickerControllerOriginalImage] as! UIImage
+            
+            //画面上のimageViewに設定
+            displayImageView.image = takenimage
+            
+            //自分のデバイス（プログラムが動いている場所）に写真を保存（カメラロール）
+            UIImageWriteToSavedPhotosAlbum(takenimage, nil, nil, nil)
+            
+            updateScrollInset()
+            
+            //モーダルで表示した撮影モード画面を閉じる（前の画面に戻る）
+            dismiss(animated: true, completion: nil)
+            
+        }
+        else {
+            //for photolibrary
+            let assetURL:AnyObject = info[UIImagePickerControllerReferenceURL]! as AnyObject
+            print("didFinishPickingMediaWithInfo")
+            print(assetURL) //assets-library://asset/asset.JPG?id=9F983DBA-EC35-42B8-8773-B597CF782EDD&ext=JPG
+            
+            print(info[UIImagePickerControllerMediaType]!) //public.image
+            print(info[UIImagePickerControllerOriginalImage]!)//<UIImage: 0x60c0000b9f20> size {3000, 2002} orientation 0 scale 1.000000
+            //info[UIImagePickerControllerOriginalImage] as? UIImageにするとそのままUIImageを取得できます。
+            
+            let strURL:String = assetURL.description
+            print("----  ")
+            print(strURL) //assets-library://asset/asset.JPG?id=ED7AC36B-A150-4C38-BB8C-B6D696F4F2ED&ext=JPG
+            
+            // ユーザーデフォルトを用意する
+            let myDefault = UserDefaults.standard
+            
+            // データを書き込んで
+            myDefault.set(strURL, forKey: "selectedPhotoURL")
+            
+            // 即反映させる
+            myDefault.synchronize()
+            
+            
+            // display()  画質が悪くなるので削除
+//            var takenimage = UIImage.init(named: "image1.jpg")
+            let takenimage = info[UIImagePickerControllerOriginalImage] as! UIImage
+            
+            //画面上のimageViewに設定
+            displayImageView.image = takenimage
+            updateScrollInset()
+            
+            //閉じる処理
+            imagePicker.dismiss(animated: true, completion: nil)
+            
+            
+            
+        }
+
+        
+        func getDocumentsDirectory(imageFileName:String) -> URL {
+            let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+            var documentsDirectory = paths[0]
+            let aaa = documentsDirectory.appendPathComponent(imageFileName)
+            
+            return documentsDirectory
+        }
+    }
+    
+
     
     //===============================
     // 計算機
@@ -474,6 +637,10 @@ class ViewController: UIViewController
         myPasteBoard.string = "aaaa"
         print(sender.description)
         print(sender.titleLabel?.text as! String)
+        
+        showAlbum()
+        readJpgImageInDocument()
+
     }
 
     func tapDelete() {
